@@ -1,0 +1,26 @@
+{
+  "name": "inoreader-open-in-background-tab",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --mode=production",
+    "watch": "NODE_ENV=development webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono0x/inoreader-open-in-background-tab.git"
+  },
+  "author": "mono",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
