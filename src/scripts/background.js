@@ -28,13 +28,13 @@ chrome.runtime.onConnectExternal.addListener((port) => {
           let params = {
             url: m.url,
             active: false
-          };
-          if (tabs.length >= 1) {
-            params.openerTabId = tabs[0].id;
           }
-          chrome.tabs.create(params);
-        });
-        break;
+          if (tabs.length >= 1) {
+            params.openerTabId = tabs[0].id
+          }
+          chrome.tabs.create(params)
+        })
+        break
     }
-  });
-});
+  })
+})

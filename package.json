@@ -6,6 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode=production",
     "pack": "npm run build && zip -r inoreader-open-in-background-tab.zip dist",
+    "test": "eslint src/scripts",
     "watch": "NODE_ENV=development webpack --mode=development --watch"
   },
   "repository": {
@@ -21,6 +22,12 @@
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "webpack": "^4.16.0",
     "webpack-chrome-extension-reloader": "^0.8.3",
     "webpack-cli": "^3.0.8"

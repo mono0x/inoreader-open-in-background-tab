@@ -21,23 +21,23 @@
  * THE SOFTWARE.
  */
 
-function content(window, id) {
-  let native_open = window.native_open = window.open;
-  let port = chrome.runtime.connect(id);
+function content (window, id) {
+  let open = window.open
+  let port = chrome.runtime.connect(id)
   window.open = (url, name) => {
-    if (url === void 0) return native_open(url,name);
-    port.postMessage({ message: 'openInTab', url: url });
-    return true;
-  };
+    if (url === void 0) return open(url, name)
+    port.postMessage({ message: 'openInTab', url: url })
+    return true
+  }
   document.addEventListener('click', (evt) => {
     if (evt.target.href && evt.target.target === '_blank') {
-      evt.preventDefault();
-      window.open(evt.target.href, '_blank');
+      evt.preventDefault()
+      window.open(evt.target.href, '_blank')
     }
-  }, false);
+  }, false)
 }
 
-let fn = `(${content.toString()})(this, '${chrome.runtime.id}');`;
-let script = document.createElement('script');
-script.appendChild(document.createTextNode(fn));
-document.body.appendChild(script);
+let fn = `(${content.toString()})(this, '${chrome.runtime.id}');`
+let script = document.createElement('script')
+script.appendChild(document.createTextNode(fn))
+document.body.appendChild(script)
