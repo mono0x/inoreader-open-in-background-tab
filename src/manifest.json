@@ -14,8 +14,8 @@
       "matches": [
         "http://www.inoreader.com/*",
         "https://www.inoreader.com/*",
-        "http://irodr.netlify.com/*",
-        "https://irodr.netlify.com/*"
+        "http://irodr.netlify.app/*",
+        "https://irodr.netlify.app/*"
       ],
       "js": ["scripts/content.js"]
     }
@@ -24,8 +24,8 @@
     "matches": [
       "http://www.inoreader.com/*",
       "https://www.inoreader.com/*",
-      "http://irodr.netlify.com/*",
-      "https://irodr.netlify.com/*"
+      "http://irodr.netlify.app/*",
+      "https://irodr.netlify.app/*"
     ]
   }
 }
