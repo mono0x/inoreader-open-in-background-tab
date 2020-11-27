@@ -1,3 +1,3 @@
 # inoreader-open-in-background-tab
 
-[![Build Status](https://travis-ci.org/mono0x/inoreader-open-in-background-tab.svg?branch=master)](https://travis-ci.org/mono0x/inoreader-open-in-background-tab)
+![test](https://github.com/mono0x/inoreader-open-in-background-tab/workflows/test/badge.svg)
