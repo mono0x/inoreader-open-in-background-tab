@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --mode=production",
-    "pack": "npm run build && zip -r inoreader-open-in-background-tab.zip dist",
+    "pack": "yarn build && zip -r inoreader-open-in-background-tab.zip dist",
     "test": "eslint src/scripts",
     "watch": "NODE_ENV=development webpack --mode=development --watch"
   },
