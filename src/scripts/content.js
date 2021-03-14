@@ -22,10 +22,10 @@
  */
 
 function content (window, id) {
-  let open = window.open
-  let port = chrome.runtime.connect(id)
+  const open = window.open
+  const port = chrome.runtime.connect(id)
   window.open = (url, name) => {
-    if (url === void 0) return open(url, name)
+    if (url === undefined) return open(url, name)
     port.postMessage({ message: 'openInTab', url: url })
     return true
   }
@@ -37,7 +37,7 @@ function content (window, id) {
   }, false)
 }
 
-let fn = `(${content.toString()})(this, '${chrome.runtime.id}');`
-let script = document.createElement('script')
+const fn = `(${content.toString()})(this, '${chrome.runtime.id}');`
+const script = document.createElement('script')
 script.appendChild(document.createTextNode(fn))
 document.body.appendChild(script)

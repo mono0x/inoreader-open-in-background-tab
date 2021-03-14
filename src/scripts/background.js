@@ -24,8 +24,8 @@ chrome.runtime.onConnectExternal.addListener((port) => {
   port.onMessage.addListener((m) => {
     switch (m.message) {
       case 'openInTab':
-        chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-          let params = {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          const params = {
             url: m.url,
             active: false
           }
