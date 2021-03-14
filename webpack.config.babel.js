@@ -2,7 +2,7 @@ import path from 'path'
 import webpack from 'webpack'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
-import ChromeExtensionReloader from 'webpack-chrome-extension-reloader'
+import ExtensionReloader from 'webpack-extension-reloader'
 
 export default {
   entry: {
@@ -47,18 +47,17 @@ export default {
         }
       ]
     }),
-    ...(process.env.NODE_ENV === 'development'
-      ? [
-          new ChromeExtensionReloader({
-            entries: {
-              background: 'background',
-              contentScript: [
-                'content'
-              ]
-            }
-          })
-        ]
-      : []
+    ...(
+      process.env.NODE_ENV === 'development'
+        ? [
+            new ExtensionReloader({
+              entries: {
+                background: 'background',
+                contentScript: 'content'
+              }
+            })
+          ]
+        : []
     )
   ]
 }
