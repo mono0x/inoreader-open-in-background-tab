@@ -1,3 +1,4 @@
 /dist/
-/node_modules/
 /inoreader-open-in-background-tab.zip
+/node_modules/
+/yarn-error.log
